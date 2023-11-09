@@ -14,6 +14,7 @@ const getWishlist = async (): Promise<Sanity.Default.Schema.Wishlist> => {
         price,
         location,
         size,
+        favorite,
         picture {
           asset -> {
             url

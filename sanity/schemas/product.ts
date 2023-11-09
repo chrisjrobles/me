@@ -1,4 +1,4 @@
-import { Rule } from 'sanity';
+import { Rule } from 'sanity'
 
 const product = {
   name: 'product',
@@ -29,13 +29,17 @@ const product = {
       title: 'Location',
       validation: (Rule: Rule) => Rule.required(),
     },
-
     {
       name: 'size',
       type: 'string',
       title: 'Size',
     },
+    {
+      name: 'favorite',
+      type: 'boolean',
+      title: 'Favorite',
+    },
   ],
-};
+}
 
-export default product;
+export default product

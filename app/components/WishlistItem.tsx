@@ -6,7 +6,7 @@ interface WishlistItemProps {
 }
 
 const WishlistItem: React.FC<WishlistItemProps> = ({ item }) => {
-  const { name, picture, price, location = '', size } = item
+  const { name, picture, price, location = '', size, favorite } = item
   return (
     <Card
       sx={{
@@ -30,6 +30,20 @@ const WishlistItem: React.FC<WishlistItemProps> = ({ item }) => {
             maxWidth: 500,
           }}
         />
+        {favorite && (
+          <CardMedia
+            component="img"
+            image="/heart.png"
+            alt="heart"
+            sx={{
+              position: 'absolute',
+              top: 8,
+              left: 8,
+              height: 50,
+              width: 'auto',
+            }}
+          />
+        )}
       </CardActionArea>
       <CardContent sx={{ minHeight: 115, flex: 0 }}>
         {name && <Typography>{name}</Typography>}
